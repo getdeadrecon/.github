@@ -39,5 +39,3 @@ deadrecon web                      # open the web console
 [Website](https://deadrecon.sh) · [Source](https://github.com/getdeadrecon/deadrecon) · [PyPI](https://pypi.org/project/deadrecon/) · [Docs](https://github.com/getdeadrecon/deadrecon/blob/main/docs/USAGE.md) · [Changelog](https://github.com/getdeadrecon/deadrecon/blob/main/CHANGELOG.md)
 
 Security reports: `security@deadrecon.sh`
-
-<sub>Our skull tips its censor bar to <a href="https://16colo.rs/pack/mist1024/LITTLEBITSPACE-THE_SUN.PNG"><em>The Sun</em></a> by <a href="https://16colo.rs/artist/littlebitspace">littlebitspace</a>. We borrowed the vibe, not the pixels.</sub>
