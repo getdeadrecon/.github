@@ -4,7 +4,7 @@
 
 <h1 align="center">DeadRecon</h1>
 
-<p align="center"><strong>The OPSEC-native OSINT framework.</strong><br>Recon that doesn't burn your infrastructure, and an honest report of exactly what each scan leaked.</p>
+<p align="center"><strong>The OPSEC-native OSINT framework.</strong><br>Recon that doesn't burn your infrastructure, and an honest report of what each scan leaked.</p>
 
 <p align="center"><em>Formerly PhantomSignal.</em></p>
 
