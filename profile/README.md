@@ -1,49 +1,41 @@
-# ∿ PHANTOM SIGNAL
+<p align="center">
+  <img src="https://raw.githubusercontent.com/getdeadrecon/deadrecon/main/docs/assets/deadrecon-card.png" width="276" alt="DeadRecon logo: tarot card XIII, a skull with a red censor bar across its eyes">
+</p>
 
-> *"See everything. Leave no trace."*
+<h1 align="center">DeadRecon</h1>
 
-Open-source OSINT intelligence framework for security researchers, penetration testers, and investigators. Combining web scraping, network reconnaissance, people intelligence, and threat analysis into a single platform.
+<p align="center"><strong>The OPSEC-native OSINT framework.</strong><br>Recon that doesn't burn your infrastructure, and an honest report of exactly what each scan leaked.</p>
+
+<p align="center"><em>Formerly PhantomSignal.</em></p>
+
+<p align="center">
+  <a href="https://pypi.org/project/deadrecon/"><img src="https://img.shields.io/pypi/v/deadrecon?style=flat-square&color=ff3b1f&logo=pypi&logoColor=white" alt="PyPI version"></a>
+  <a href="https://github.com/getdeadrecon/deadrecon/stargazers"><img src="https://img.shields.io/github/stars/getdeadrecon/deadrecon?style=flat-square&color=ff3b1f&logo=github" alt="GitHub stars"></a>
+  <img src="https://img.shields.io/badge/python-3.10+-111111?style=flat-square&logo=python&logoColor=white" alt="Python 3.10+">
+  <a href="https://github.com/getdeadrecon/deadrecon/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-f7de52?style=flat-square" alt="MIT license"></a>
+</p>
 
 ---
-
-## PhantomSignal — OSINT Intelligence Framework
-
-[![PyPI](https://img.shields.io/pypi/v/phantomsignal?style=flat-square&color=4d9fd6&logo=pypi&logoColor=white)](https://pypi.org/project/phantomsignal/)
-[![PyPI Downloads](https://img.shields.io/pypi/dm/phantomsignal?style=flat-square&color=7fb8dd&logo=pypi&logoColor=white)](https://pypi.org/project/phantomsignal/)
-[![Stars](https://img.shields.io/github/stars/getphantomsignal/phantomsignal?style=flat-square&color=4d9fd6&logo=github)](https://github.com/getphantomsignal/phantomsignal/stargazers)
-[![Python 3.10+](https://img.shields.io/badge/python-3.10+-7fb8dd?style=flat-square&logo=python&logoColor=white)](https://python.org)
-[![License](https://img.shields.io/badge/license-MIT-4d9fd6?style=flat-square)](https://github.com/getphantomsignal/phantomsignal/blob/main/LICENSE)
-[![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20macOS%20%7C%20Windows%20%7C%20Docker-c9a24a?style=flat-square)](https://github.com/getphantomsignal/phantomsignal)
 
 ```bash
-pip install phantomsignal
-phantomsignal scan <target>     # rich panel output — ports, DNS, tech, geo, anomalies
-phantomsignal web               # launch the web console (Dark / Light)
+pip install deadrecon
+deadrecon scan example.com         # DNS, ports, tech and threat intel
+deadrecon scan example.com --tor   # starts Tor for you, and stops if it can't confirm it
+deadrecon web                      # open the web console
 ```
 
-A modular, plugin-driven OSINT platform with 46+ intelligence API integrations, covert low-and-slow scanning, a themeable web console, and full CLI support.
+## Why DeadRecon
 
-**Capabilities:** `web recon` · `network intelligence` · `people profiling` · `threat analysis` · `covert scan` · `export pipeline`
+- **It tells you what you leaked.** Every scan ends with an OPSEC grade and a per-module breakdown of what was proxied and what traces back to you. The grades were checked against packet captures, and they're deliberately unflattering.
+- **One-click Tor that fails closed.** DeadRecon starts Tor, confirms each scan is on it before touching the target, and stops if it can't. Modules that would bypass Tor are skipped and listed in the report.
+- **Scans don't name the tool.** SMTP greetings and User-Agents no longer identify DeadRecon to targets or third parties, as confirmed with packet captures.
+- **A full recon pipeline.** Subdomains, ports, tech fingerprinting, web crawling and vulnerability scanning, plus 50+ intelligence integrations. Many sources need no API key.
+- **Your choice of output.** Use the web console, CLI or REST API, and export to JSON, CSV, HTML, PDF, XLSX, XML, Markdown or STIX 2.1.
 
----
-
-## What's New — v1.24.0
-
-| | |
-|---|---|
-| 🎨 **Two tuned themes** | A theming system on semantic role tokens: **Dark** (deep-slate federal, default) and **Light** (clean, print-friendly). Segmented switch in the nav; persists and pre-paints. Every token validated to WCAG AA. |
-| 📝 **Plain-language interface** | The web UI was rewritten from codenames to clear labels — Dashboard, New Scan, Scans, Profiler, Integrations — with Findings, Risk Score, and Data Sources throughout |
-| 🔤 **Roboto + signal mark** | Roboto for UI text (tables/terminal/code stay monospace), a font-based `∿` signal glyph, and a PS-monogram favicon |
-| 🖱️ **Clickable dashboard** | Stat cards are now links straight into the matching view |
-| 🔄 **One-click re-scan** | Re-run any completed scan against the same target with its original profile, modules, and options |
-| 📊 **Honest risk gradient** | The Risk Score meter runs a true green → amber → red ramp, so low reads green (safe) at a glance |
+**For authorized security research, investigations and education only.** Only scan targets you have permission to test.
 
 ---
 
-## Links
+[Website](https://deadrecon.sh) · [Source](https://github.com/getdeadrecon/deadrecon) · [PyPI](https://pypi.org/project/deadrecon/) · [Docs](https://github.com/getdeadrecon/deadrecon/blob/main/docs/USAGE.md) · [Changelog](https://github.com/getdeadrecon/deadrecon/blob/main/CHANGELOG.md)
 
-[phantomsignal.sh](https://phantomsignal.sh) · [GitHub](https://github.com/getphantomsignal/phantomsignal) · [PyPI](https://pypi.org/project/phantomsignal/) · [Changelog](https://github.com/getphantomsignal/phantomsignal/blob/main/CHANGELOG.md) · [Docs](https://github.com/getphantomsignal/phantomsignal/blob/main/docs/USAGE.md)
-
----
-
-Security disclosures & research inquiries → `security@phantomsignal.sh`
+Security reports: `security@deadrecon.sh`
